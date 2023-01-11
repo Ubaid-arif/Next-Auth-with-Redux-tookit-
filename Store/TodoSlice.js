@@ -3,7 +3,7 @@ import { HYDRATE } from "next-redux-wrapper";
 
 const initialState = {
   value: [
-    {TodoName : "Ali"} 
+    {TodoName : ""} 
   ],
 };
 

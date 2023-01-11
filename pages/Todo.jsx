@@ -96,11 +96,11 @@ export const getServerSideProps = wrapper.getServerSideProps(
       `https://reqres.in/api/users/${Math.floor(Math.random() * 10 + 1)}`
     );
 
-    const state = store.getState().Todo;
-    console.log('state-->', state);
-    const { data } = await response.json();
+    // const ReduxTodoData = useSelector(Todos);
+    // console.log('state-->', ReduxTodoData);
+    const {data} = await response.json();
     return {
-      props: { data },
+      props: {data},
     };
   }
 );

@@ -33,19 +33,20 @@ const persistConfig = {
   storage,
 }
 
+
+
 const reducer = combineReducers({
   [countSlice.name]: countSlice.reducer,
   [TodoSlice.name]: TodoSlice.reducer,
 })
 
- const persistedReducer = persistReducer( persistConfig , reducer)
+ export const persistedReducer = persistReducer( persistConfig , reducer)
 
 
 const makeStore = () =>
   configureStore({
     reducer: persistedReducer ,
-    middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({
+    middleware: getDefaultMiddleware => getDefaultMiddleware({
       serializableCheck: false,
     }),
 
